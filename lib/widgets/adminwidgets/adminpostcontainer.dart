@@ -240,7 +240,11 @@ class _MyVideoPlayerState extends State<MyVideoPlayer> {
             ),
           );
         } else {
-          return Center(child: CircularProgressIndicator());
+          return Container(
+            child: Center(child: CircularProgressIndicator()),
+            width: double.infinity,
+            height: MediaQuery.of(context).size.height * 0.35,
+          );
         }
       },
     );
@@ -257,8 +261,12 @@ class MyImg extends StatelessWidget {
       imageUrl: "$linkmyimg",
       width: constrain.maxWidth,
       fit: BoxFit.cover,
-      placeholder: (context, url) => Center(
-        child: CircularProgressIndicator(),
+      placeholder: (context, url) => Container(
+        child: Center(
+          child: CircularProgressIndicator(),
+        ),
+        width: double.infinity,
+        height: MediaQuery.of(context).size.height * 0.35,
       ),
       errorWidget: (context, url, error) => Center(
         child: Text(

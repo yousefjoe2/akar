@@ -86,7 +86,7 @@ class AdminToAdd extends StatelessWidget {
                               )));
                 },
                 child: Text(
-                  "اضافة موضوعبدون صورة او فيديو",
+                  "اضافة مواضيع بدون صورة او فيديو",
                   style: bartext2,
                 ),
               ),
