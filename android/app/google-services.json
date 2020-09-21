@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "1071384781472",
+    "firebase_url": "https://akar-f213e.firebaseio.com",
+    "project_id": "akar-f213e",
+    "storage_bucket": "akar-f213e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1071384781472:android:57f736e1f3c793aaba1fc5",
+        "android_client_info": {
+          "package_name": "com.example.akar"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1071384781472-1k7p1tcu6na4nh9fk3tvp0v8de7eaigh.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBuSwls4KBgs2gaE-Z_4QGSyGKtDK2CwfQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1071384781472-1k7p1tcu6na4nh9fk3tvp0v8de7eaigh.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
