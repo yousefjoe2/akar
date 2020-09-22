@@ -42,10 +42,11 @@ class PostContainer extends StatelessWidget {
       width: double.infinity,
       decoration: BoxDecoration(
         borderRadius: BorderRadius.circular(20),
-        gradient: LinearGradient(
-            begin: Alignment.topLeft,
-            end: Alignment.bottomRight,
-            colors: [colorblue1 , Colors.black]),
+        color: Color(0xff839EF7),
+        // gradient: LinearGradient(
+        //     begin: Alignment.topLeft,
+        //     end: Alignment.bottomRight,
+        //     colors: [colorblue1 , Colors.black]),
       ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,

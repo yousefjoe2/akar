@@ -33,15 +33,16 @@ class HomeScreen extends StatelessWidget {
         ],
       ),
       body: Padding(
-        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
+        padding: EdgeInsets.symmetric(horizontal: 15, vertical: 25),
         child: Column(
           children: [
             // Expanded home screen it is wigdet in widget to use in home screen to go to anthor pages
             // this is for بيوت جاهزة
             ExpandedHomeScreen(
               name: "بيوت جاهزة",
-              img: "prefab",
-              widnumb: 0.7,
+              img: "prefab.png",
+              widnumb: 0.8,
+
               goto: () {
                 Navigator.push(
                   context,
@@ -50,7 +51,7 @@ class HomeScreen extends StatelessWidget {
               },
             ),
             SizedBox(
-              height: 10,
+              height: 25,
             ),
             // this expanded to put in it 2 expanded home screen اراضي للبيع و شقق للايجار
             Expanded(
@@ -60,8 +61,9 @@ class HomeScreen extends StatelessWidget {
                   children: [
                     ExpandedHomeScreen(
                       name: "اراضي للبيع",
-                      img: "lands",
+                      img: "lands.png",
                       widnumb: 0.4,
+
                       goto: () {
                         Navigator.push(
                           context,
@@ -75,8 +77,9 @@ class HomeScreen extends StatelessWidget {
                     ),
                     ExpandedHomeScreen(
                       name: "شقق للايجار",
-                      img: "department",
-                      widnumb: 0.4,
+                      img: "department2.png",
+                      widnumb: 0.30,
+
                       goto: () {
                         Navigator.push(
                           context,
@@ -88,6 +91,9 @@ class HomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            SizedBox(
+              height: 25,
             ),
           ],
         ),

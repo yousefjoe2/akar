@@ -36,8 +36,9 @@ class AdminHomeScreen extends StatelessWidget {
           children: [
             ExpandedHomeScreen(
               name: "بيوت جاهزة",
-              img: "prefab",
-              widnumb: 0.7,
+              img: "prefab.png",
+              widnumb: 0.8,
+
               goto: () {
                 Navigator.push(
                   context,
@@ -46,7 +47,7 @@ class AdminHomeScreen extends StatelessWidget {
               },
             ),
             SizedBox(
-              height: 10,
+              height: 25,
             ),
             Expanded(
               child: Container(
@@ -55,8 +56,9 @@ class AdminHomeScreen extends StatelessWidget {
                   children: [
                     ExpandedHomeScreen(
                       name: "اراضي للبيع",
-                      img: "lands",
+                      img: "lands.png",
                       widnumb: 0.4,
+
                       goto: () {
                         Navigator.push(
                           context,
@@ -70,8 +72,9 @@ class AdminHomeScreen extends StatelessWidget {
                     ),
                     ExpandedHomeScreen(
                       name: "شقق للايجار",
-                      img: "department",
-                      widnumb: 0.4,
+                      img: "department2.png",
+                      widnumb: 0.30,
+
                       goto: () {
                         Navigator.push(
                           context,
@@ -83,6 +86,9 @@ class AdminHomeScreen extends StatelessWidget {
                   ],
                 ),
               ),
+            ),
+            SizedBox(
+              height: 25,
             ),
           ],
         ),

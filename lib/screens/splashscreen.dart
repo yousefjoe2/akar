@@ -11,7 +11,7 @@ class SplashToHome extends StatelessWidget {
       seconds: 3,
       navigateAfterSeconds: HomeScreen(),
       image: Image.asset("assets/images/splash3.png"),
-      title: Text("عقار عرعر يرحب بكم" , style: TextStyle(color: colorpurple3 , fontSize: 35),),
+      title: Text("عقار عرعر يرحب بكم" , style: TextStyle(color: colorpurple3 , fontSize: 35 , fontFamily: "shoroq"),),
       photoSize: 100,
       loaderColor: colorblue3,
       loadingText: Text("Loading Now", style: TextStyle(color: colorpurple3 , fontSize: 35),),

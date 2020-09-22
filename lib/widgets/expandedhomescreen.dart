@@ -38,7 +38,7 @@ class ExpandedHomeScreen extends StatelessWidget {
                       height: 5,
                     ),
                     Container(
-                      child: Image.asset("assets/images/$img.png"),
+                      child: Image.asset("assets/images/$img"),
                       constraints: BoxConstraints(
                           maxWidth: deviceinfo.size.width * widnumb),
                     ),
