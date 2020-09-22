@@ -13,7 +13,8 @@ class AdminPostContainer extends StatelessWidget {
   final String title;
   final String discription;
   final bool thereisimgorvid;
-
+  String callnow;
+  String whatsapp;
   //for del
   final String elmaincat;
   final String elcity;
@@ -27,14 +28,32 @@ class AdminPostContainer extends StatelessWidget {
       this.elcity,
       this.id,
       this.thereisimgorvid});
+
+  Future<dynamic> getData() async {
+    Future<DocumentSnapshot> car = Firestore.instance
+        .collection('الارقام')
+        .document('i9QG86XmVTPKqiDPZlnA')
+        .get();
+    car.then((carSnapshot) => {
+          callnow = carSnapshot["اتصل بنا"],
+          whatsapp = carSnapshot['واتس اب'],
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
+    getData();
     return Container(
       //style main container
       margin: EdgeInsets.only(bottom: 10),
       width: double.infinity,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20), color: Colors.black),
+        borderRadius: BorderRadius.circular(20),
+        gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [colorblue1, Colors.black]),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -96,7 +115,7 @@ class AdminPostContainer extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 onPressed: () async {
                   await FlutterLaunch.launchWathsApp(
-                      phone: "+201017190886", message: "");
+                      phone: "+$whatsapp", message: "");
                 },
                 child: Row(
                   children: [
@@ -108,13 +127,13 @@ class AdminPostContainer extends StatelessWidget {
                     SizedBox(
                       width: 6,
                     ),
-                    Text(
-                      "الواتس اب",
-                      style: TextStyle(fontSize: 20, color: Colors.black),
-                    ),
+                    // Text(
+                    //   "الواتس اب",
+                    //   style: TextStyle(fontSize: 20, color: Colors.black),
+                    // ),
                   ],
                 ),
-                color: Colors.lightBlue,
+                color: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
               ),
@@ -122,8 +141,7 @@ class AdminPostContainer extends StatelessWidget {
               FlatButton(
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 onPressed: () {
-                  // launch("tel: 01100575564");
-                  print(linkimg);
+                  launch("tel: $callnow");
                 },
                 child: Row(
                   children: [
@@ -134,13 +152,13 @@ class AdminPostContainer extends StatelessWidget {
                     SizedBox(
                       width: 6,
                     ),
-                    Text(
-                      "اتصل بي",
-                      style: TextStyle(fontSize: 16, color: Colors.black),
-                    ),
+                    // Text(
+                    //   "اتصل بي",
+                    //   style: TextStyle(fontSize: 16, color: Colors.black),
+                    // ),
                   ],
                 ),
-                color: Colors.lightBlue,
+                color: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
               ),
@@ -173,7 +191,7 @@ class AdminPostContainer extends StatelessWidget {
                       width: 6,
                     ),
                     Text(
-                      "مسح الموضوع",
+                      "",
                       style: TextStyle(fontSize: 16, color: Colors.black),
                     ),
                   ],

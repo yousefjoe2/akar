@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:akar/screens/homescreen.dart';
+import 'package:akar/screens/splashscreen.dart';
 
 /*
 * Made By YousefFathi
@@ -23,7 +24,7 @@ class MyApp extends StatelessWidget {
       /*
       this homescreen made for all users and to join as admin you can join by setting icon in appbar
        */
-      home: HomeScreen(),
+      home: SplashToHome(),
     );
   }
 }

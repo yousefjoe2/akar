@@ -5,6 +5,7 @@ import 'package:url_launcher/url_launcher.dart';
 import 'package:flutter_launch/flutter_launch.dart';
 import 'package:video_player/video_player.dart';
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_firestore/cloud_firestore.dart';
 
 class PostContainer extends StatelessWidget {
   final String linkimg;
@@ -12,20 +13,40 @@ class PostContainer extends StatelessWidget {
   final String title;
   final String discription;
   final bool thereisimgorvid;
+  String callnow;
+  String whatsapp;
   PostContainer(
       {this.linkimg,
       this.isimage,
       this.title,
       this.discription,
       this.thereisimgorvid});
+
+  Future<dynamic> getData() async {
+    Future<DocumentSnapshot> car = Firestore.instance
+        .collection('الارقام')
+        .document('i9QG86XmVTPKqiDPZlnA')
+        .get();
+    car.then((carSnapshot) => {
+          callnow = carSnapshot["اتصل بنا"],
+          whatsapp = carSnapshot['واتس اب'],
+        });
+  }
+
   @override
   Widget build(BuildContext context) {
+    getData();
     return Container(
       //style main container
       margin: EdgeInsets.only(bottom: 10),
       width: double.infinity,
       decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(20), color: Colors.black),
+        borderRadius: BorderRadius.circular(20),
+        gradient: LinearGradient(
+            begin: Alignment.topLeft,
+            end: Alignment.bottomRight,
+            colors: [colorblue1 , Colors.black]),
+      ),
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         crossAxisAlignment: CrossAxisAlignment.end,
@@ -87,7 +108,7 @@ class PostContainer extends StatelessWidget {
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 onPressed: () async {
                   await FlutterLaunch.launchWathsApp(
-                      phone: "+201017190886", message: "");
+                      phone: "+$whatsapp", message: "");
                 },
                 child: Row(
                   children: [
@@ -99,13 +120,13 @@ class PostContainer extends StatelessWidget {
                     SizedBox(
                       width: 6,
                     ),
-                    Text(
-                      "الواتس اب",
-                      style: TextStyle(fontSize: 20, color: Colors.black),
-                    ),
+                    // Text(
+                    //   "الواتس اب",
+                    //   style: TextStyle(fontSize: 20, color: Colors.black),
+                    // ),
                   ],
                 ),
-                color: Colors.lightBlue,
+                color: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
               ),
@@ -113,7 +134,7 @@ class PostContainer extends StatelessWidget {
               FlatButton(
                 padding: EdgeInsets.symmetric(horizontal: 15, vertical: 10),
                 onPressed: () {
-                  launch("tel: 01100575564");
+                  launch("tel: $callnow");
                 },
                 child: Row(
                   children: [
@@ -124,13 +145,13 @@ class PostContainer extends StatelessWidget {
                     SizedBox(
                       width: 6,
                     ),
-                    Text(
-                      "اتصل بي",
-                      style: TextStyle(fontSize: 16, color: Colors.black),
-                    ),
+                    // Text(
+                    //   "اتصل بي",
+                    //   style: TextStyle(fontSize: 16, color: Colors.black),
+                    // ),
                   ],
                 ),
-                color: Colors.lightBlue,
+                color: Colors.white,
                 shape: RoundedRectangleBorder(
                     borderRadius: BorderRadius.circular(30)),
               ),
