@@ -36,7 +36,7 @@ class _DepartmentScreenState extends State<DepartmentScreen> {
         child: StreamBuilder(
             stream: Firestore.instance.collection("شقق للايجار").snapshots(),
             builder: (context, snapshot) {
-              if (!snapshot.hasData) return Text("loading");
+              if (!snapshot.hasData) return Text("");
               return ListView.builder(
                 itemCount: snapshot.data.documents.length,
                 itemBuilder: (context, num) {

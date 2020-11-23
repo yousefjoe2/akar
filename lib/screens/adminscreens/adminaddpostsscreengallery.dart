@@ -6,6 +6,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:video_player/video_player.dart';
 import 'package:flutter/material.dart';
 import 'package:firebase_storage/firebase_storage.dart';
+import 'package:intl/intl.dart';
 
 class AddPostfromgallery extends StatefulWidget {
   String elmaincat;
@@ -26,6 +27,9 @@ class _AddPostfromgalleryState extends State<AddPostfromgallery> {
   final _formkey = GlobalKey<FormState>();
   TextEditingController _post_title = TextEditingController();
   TextEditingController _post_descripition = TextEditingController();
+  DateTime now = DateTime.now();
+  // static final DateFormat formatter = DateFormat.yMd().add_jm();
+  // final String formatted = formatter.format(now);
 
   Future chooseFile() async {
     if (isimage) {
@@ -150,7 +154,9 @@ class _AddPostfromgalleryState extends State<AddPostfromgallery> {
                           }),
                     ),
                     isimage
-                        ? _image == null ? Text("no image") : Image.file(_image)
+                        ? _image == null
+                            ? Text("no image")
+                            : Image.file(_image)
                         : _image == null
                             ? Text("no video")
                             : MyVideoPlayer(
@@ -196,6 +202,7 @@ class _AddPostfromgalleryState extends State<AddPostfromgallery> {
                             "thereisimgorvid": true,
                             "isimg": isimage,
                             "post_img": _uploadedFileURL,
+                            "time": now.millisecondsSinceEpoch,
                           });
                         }
                         Navigator.pop(context);

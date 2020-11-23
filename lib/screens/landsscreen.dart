@@ -36,7 +36,7 @@ class _LandsScreenState extends State<LandsScreen> {
         child: StreamBuilder(
             stream: Firestore.instance.collection("اراضي جاهزة").snapshots(),
             builder: (context, snapshot) {
-              if (!snapshot.hasData) return Text("loading");
+              if (!snapshot.hasData) return Text("");
               return ListView.builder(
                 itemCount: snapshot.data.documents.length,
                 itemBuilder: (context, num) {

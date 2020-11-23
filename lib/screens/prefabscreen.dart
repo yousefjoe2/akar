@@ -36,7 +36,7 @@ class _PrefabScreenState extends State<PrefabScreen> {
         child: StreamBuilder(
             stream: Firestore.instance.collection("بيوت جاهزة").snapshots(),
             builder: (context, snapshot) {
-              if (!snapshot.hasData) return Text("loading");
+              if (!snapshot.hasData) return Text("");
               return ListView.builder(
                 itemCount: snapshot.data.documents.length,
                 itemBuilder: (context, num) {

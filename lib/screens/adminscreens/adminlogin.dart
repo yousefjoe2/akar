@@ -85,18 +85,23 @@ class _AdminLoginState extends State<AdminLogin> {
                         showspinner = true;
                       });
                       if (_formkey.currentState.validate()) {
-                        var result = await FirebaseAuth.instance
-                            .signInWithEmailAndPassword(
-                                email: _emailcontroller.text,
-                                password: _passwordcontroller.text);
+                        var result;
+
+                        try {
+                          result = await FirebaseAuth.instance
+                              .signInWithEmailAndPassword(
+                                  email: _emailcontroller.text,
+                                  password: _passwordcontroller.text);
+                        } catch (e) {
+                          setState(() {
+                            showspinner = false;
+                          });
+                        }
                         if (result != null) {
                           Navigator.push(
                               context,
                               MaterialPageRoute(
                                   builder: (context) => AdminHomeScreen()));
-                          setState(() {
-                            showspinner = false;
-                          });
                         }
                       }
                     },

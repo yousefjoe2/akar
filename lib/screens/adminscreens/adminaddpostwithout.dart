@@ -18,6 +18,7 @@ class _AddpostsWithoutState extends State<AddpostsWithout> {
   TextEditingController _post_title = TextEditingController();
   TextEditingController _post_descripition = TextEditingController();
   TextEditingController _post_link = TextEditingController();
+  DateTime now = DateTime.now();
   @override
   void dispose() {
     _post_title.dispose();
@@ -91,6 +92,7 @@ class _AddpostsWithoutState extends State<AddpostsWithout> {
                           'dis': _post_descripition.text,
                           "thereisimgorvid": false,
                           'isimg': true,
+                          "time": now.millisecondsSinceEpoch,
                         });
                         Navigator.pop(context);
                       }

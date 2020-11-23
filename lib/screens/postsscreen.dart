@@ -36,9 +36,10 @@ class PostsScreen extends StatelessWidget {
                 .collection("$namecollection")
                 .document("$namedocument")
                 .collection("posts")
+                .orderBy("time", descending: true)
                 .snapshots(),
             builder: (context, snapshot) {
-              if (!snapshot.hasData) return Text("loading");
+              if (!snapshot.hasData) return Text("");
               return ListView.builder(
                 itemCount: snapshot.data.documents.length,
                 itemBuilder: (context, num) {

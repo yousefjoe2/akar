@@ -53,7 +53,7 @@ class _AdminDepartmentScreenState extends State<AdminDepartmentScreen> {
         child: StreamBuilder(
             stream: Firestore.instance.collection("شقق للايجار").snapshots(),
             builder: (context, snapshot) {
-              if (!snapshot.hasData) return Text("loading");
+              if (!snapshot.hasData) return Text("");
               return ListView.builder(
                 itemCount: snapshot.data.documents.length,
                 itemBuilder: (context, num) {

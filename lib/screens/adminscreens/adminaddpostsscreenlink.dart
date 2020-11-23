@@ -18,6 +18,7 @@ class _AddPostState extends State<AddPost> {
   TextEditingController _post_title = TextEditingController();
   TextEditingController _post_descripition = TextEditingController();
   TextEditingController _post_link = TextEditingController();
+  DateTime now = DateTime.now();
   @override
   void dispose() {
     _post_title.dispose();
@@ -126,7 +127,8 @@ class _AddPostState extends State<AddPost> {
                           'dis': _post_descripition.text,
                           "thereisimgorvid": true,
                           "isimg": isimage,
-                          "post_img": _post_link.text
+                          "post_img": _post_link.text,
+                          "time": now.millisecondsSinceEpoch,
                         });
                         Navigator.pop(context);
                       }
