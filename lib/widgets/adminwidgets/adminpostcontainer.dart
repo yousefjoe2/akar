@@ -90,6 +90,7 @@ class AdminPostContainer extends StatelessWidget {
             padding: const EdgeInsets.symmetric(horizontal: 15, vertical: 5),
             child: Text(
               title == null ? "" : "$title",
+              textAlign: TextAlign.right,
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 22,
@@ -100,6 +101,7 @@ class AdminPostContainer extends StatelessWidget {
             padding: const EdgeInsets.only(bottom: 5, left: 15, right: 15),
             child: Text(
               discription == null ? "" : "$discription",
+              textAlign: TextAlign.right,
               style: TextStyle(
                   color: Colors.white,
                   fontSize: 20,
