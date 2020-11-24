@@ -1,0 +1,34 @@
+{
+    "logs": [
+        {
+            "outputFile": "Z:\\Mobile\\github\\repo\\akar2\\build\\sqflite\\intermediates\\incremental\\mergeReleaseResources\\merged.dir\\values-v16\\values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Yousef\\.gradle\\caches\\transforms-2\\files-2.1\\fa829ec2c168ab9e801bfb1e74b2ce1a\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        },
+        {
+            "outputFile": "Z:\\Mobile\\github\\repo\\akar2\\build\\sqflite\\intermediates\\res\\merged\\release\\values-v16\\values-v16.xml",
+            "map": [
+                {
+                    "source": "C:\\Users\\Yousef\\.gradle\\caches\\transforms-2\\files-2.1\\fa829ec2c168ab9e801bfb1e74b2ce1a\\res\\values-v16\\values-v16.xml",
+                    "from": {
+                        "startLines": "2",
+                        "startColumns": "4",
+                        "startOffsets": "55",
+                        "endColumns": "65",
+                        "endOffsets": "116"
+                    }
+                }
+            ]
+        }
+    ]
+}

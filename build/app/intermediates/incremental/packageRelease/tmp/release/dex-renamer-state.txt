@@ -1,0 +1,7 @@
+#Tue Nov 24 11:52:40 EET 2020
+base.0=Z\:\\Mobile\\github\\repo\\akar2\\build\\app\\intermediates\\transforms\\dexMerger\\release\\0
+path.1=classes2.dex
+renamed.1=classes2.dex
+path.0=classes.dex
+renamed.0=classes.dex
+base.1=Z\:\\Mobile\\github\\repo\\akar2\\build\\app\\intermediates\\transforms\\dexMerger\\release\\0

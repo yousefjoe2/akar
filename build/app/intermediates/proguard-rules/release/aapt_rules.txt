@@ -1,0 +1,22 @@
+# Referenced at Z:\Mobile\github\repo\akar2\build\app\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:29
+-keep class com.example.akar.MainActivity { <init>(...); }
+# Referenced at Z:\Mobile\github\repo\akar2\build\app\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:149
+-keep class com.google.android.gms.common.api.GoogleApiActivity { <init>(...); }
+# Referenced at Z:\Mobile\github\repo\akar2\build\app\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:129
+-keep class com.google.android.gms.measurement.AppMeasurementJobService { <init>(...); }
+# Referenced at Z:\Mobile\github\repo\akar2\build\app\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:119
+-keep class com.google.android.gms.measurement.AppMeasurementReceiver { <init>(...); }
+# Referenced at Z:\Mobile\github\repo\akar2\build\app\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:125
+-keep class com.google.android.gms.measurement.AppMeasurementService { <init>(...); }
+# Referenced at Z:\Mobile\github\repo\akar2\build\app\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:135
+-keep class com.google.firebase.auth.internal.FederatedSignInActivity { <init>(...); }
+# Referenced at Z:\Mobile\github\repo\akar2\build\app\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:71
+-keep class com.google.firebase.components.ComponentDiscoveryService { <init>(...); }
+# Referenced at Z:\Mobile\github\repo\akar2\build\app\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:143
+-keep class com.google.firebase.provider.FirebaseInitProvider { <init>(...); }
+# Referenced at Z:\Mobile\github\repo\akar2\build\app\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:24
+-keep class io.flutter.app.FlutterApplication { <init>(...); }
+# Referenced at Z:\Mobile\github\repo\akar2\build\app\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:104
+-keep class io.flutter.plugins.imagepicker.ImagePickerFileProvider { <init>(...); }
+# Referenced at Z:\Mobile\github\repo\akar2\build\app\intermediates\merged_manifests\release\processReleaseManifest\merged\AndroidManifest.xml:114
+-keep class io.flutter.plugins.urllauncher.WebViewActivity { <init>(...); }
