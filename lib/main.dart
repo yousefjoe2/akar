@@ -8,6 +8,7 @@ import 'package:akar/screens/splashscreen.dart';
 * end in 22 /9 /2020
 * back end Firebase
 * for android and ios
+* updated in 24/11/2020
 * akar 3r3r
 *
  */
